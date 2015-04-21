@@ -1,4 +1,24 @@
-p#notice = notice
+.row
+  h1= '@' + @account.twitter_name
+  .col-sm-6
+    - if @account.last_updated
+      table.table
+        tr
+          th Tweets count
+          td= @account.tweets_count
+        tr
+          th Last updated
+          td= @account.last_updated.to_s(:short)
+    - else
+      p
+        em No tweets. Will update it shortly
 
-
-= link_to 'Back', accounts_path
+- if @account.last_updated
+  .row
+    table.table
+      - @account.tweets.order('tweet_created_at DESC').each do |tweet|
+        tr
+          td
+            span.label.label-info= tweet.tweet_created_at.to_s(:db)
+            |&nbsp;
+            = tweet.tweet_text

@@ -12,6 +12,8 @@ gem 'bootstrap-sass'
 gem 'slim-rails'
 gem 'interactor-rails', '~> 2.0'
 gem 'twitter'
+gem 'sidekiq'
+gem 'sinatra', require: nil # required by sidekiq/web
 
 group :development do
   gem 'better_errors'

@@ -4,6 +4,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.string :twitter_name
       t.string :twitter_id
       t.timestamp :last_updated
+      t.integer :tweets_count
 
       t.timestamps null: false
     end

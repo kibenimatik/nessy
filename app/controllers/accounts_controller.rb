@@ -5,7 +5,7 @@ class AccountsController < ApplicationController
   end
 
   def show
-    @account = Account.find_by!(name: params[:id])
+    @account = Account.find_by!(twitter_name: params[:id])
   end
 
   def create
