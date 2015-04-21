@@ -9,7 +9,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    result = CreateAccount.call(account_params)
+    result = RegisterAccount.call(name: params[:name])
 
     if result.success?
       redirect_to root_path, notice: 'Account was successfully created.'
@@ -17,9 +17,4 @@ class AccountsController < ApplicationController
       redirect_to root_path, alert: result.message
     end
   end
-
-  private
-    def account_params
-      params.require(:account).permit(:name)
-    end
 end

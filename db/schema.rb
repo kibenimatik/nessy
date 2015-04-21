@@ -14,7 +14,8 @@
 ActiveRecord::Schema.define(version: 20150421005948) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string   "name"
+    t.string   "twitter_name"
+    t.string   "twitter_id"
     t.datetime "last_updated"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false

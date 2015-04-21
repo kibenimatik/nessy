@@ -1,9 +1,9 @@
 class Account < ActiveRecord::Base
-  validates :name, presence: true
+  validates :twitter_name, :twitter_id, presence: true, uniqueness: { scope: [:twitter_name, :twitter_id]}
 
   scope :recent, -> { order('created_at DESC').limit(10) }
 
   def to_param
-    name
+    twitter_name
   end
 end

@@ -10,7 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'slim-rails'
-gem "interactor-rails", "~> 2.0"
+gem 'interactor-rails', '~> 2.0'
+gem 'twitter'
 
 group :development do
   gem 'better_errors'

@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :account do
-    name "MyString"
+    twitter_name "foo"
+    twitter_id   "bar"
   end
 
 end
