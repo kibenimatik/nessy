@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'slim-rails'
+gem "interactor-rails", "~> 2.0"
+
 group :development do
   gem 'better_errors'
   gem 'foreman'
@@ -24,4 +26,8 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'shoulda-matchers'
 end
